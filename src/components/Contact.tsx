@@ -5,19 +5,22 @@ const contactCards = [
     icon: MapPin,
     title: 'Address',
     content: 'No: 2/1, 1st Cross Street, Sri Ayyappa Nagar, Chinmaya Nagar, Virugambakkam, Chennai – 600 092',
-    color: 'royal',
+    bgClass: 'bg-royal/10',
+    iconClass: 'text-royal',
   },
   {
     icon: Phone,
     title: 'Phone',
     content: '044 - 2479 9335\n24791689\n9444026642',
-    color: 'gold',
+    bgClass: 'bg-gold/10',
+    iconClass: 'text-gold',
   },
   {
     icon: Mail,
     title: 'Email',
     content: 'marthomaschool@gmail.com',
-    color: 'royal',
+    bgClass: 'bg-royal/10',
+    iconClass: 'text-royal',
   },
 ];
 
@@ -43,8 +46,8 @@ export default function Contact() {
               className="fade-up bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"
               style={{ transitionDelay: `${idx * 0.1}s` }}
             >
-              <div className={`w-12 h-12 rounded-lg bg-${card.color}/10 flex items-center justify-center mb-4`}>
-                <card.icon className={`w-6 h-6 text-${card.color}`} />
+              <div className={`${card.bgClass} w-12 h-12 rounded-lg flex items-center justify-center mb-4`}>
+                <card.icon className={`w-6 h-6 ${card.iconClass}`} />
               </div>
               <h3 className="font-semibold text-navy mb-2">{card.title}</h3>
               <p className="text-text text-sm whitespace-pre-line">{card.content}</p>
@@ -54,17 +57,17 @@ export default function Contact() {
 
         {/* Map */}
         <div className="fade-up">
-          <div className="bg-white rounded-xl shadow-xl overflow-hidden">
+          <div className="bg-white rounded-[32px] shadow-xl overflow-hidden">
             <iframe
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.57733358474!2d80.19330987412185!3d13.062554212879599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266b115555555%3A0x34ebbc5d0d1dbd7b!2sMar%20Thoma%20Matriculation%20Higher%20Secondary%20School!5e0!3m2!1sen!2sin!4v1783013637532!5m2!1sen!2sin"
-  width="100%"
-  height="450"
-  style={{ border: 0 }}
-  allowFullScreen
-  loading="lazy"
-  referrerPolicy="strict-origin-when-cross-origin"
-></iframe>
-            
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.57733358474!2d80.19330987412185!3d13.062554212879599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266b115555555%3A0x34ebbc5d0d1dbd7b!2sMar%20Thoma%20Matriculation%20Higher%20Secondary%20School!5e0!3m2!1sen!2sin!4v1783013637532!5m2!1sen!2sin"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+              title="Mar Thoma Matriculation Higher Secondary School location map"
+            />
           </div>
 
           {/* Social Links */}

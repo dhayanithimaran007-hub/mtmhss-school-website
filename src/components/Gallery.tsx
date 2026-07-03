@@ -20,7 +20,7 @@ const galleryImages = [
   {
     label: 'Cultural Event',
     color: 'from-purple-600 to-purple-800',
-    src: '/Extracurricular%202.jpeg',
+    src: '/cultural%20event.jpeg',
   },
   {
     label: 'Classroom',
@@ -57,26 +57,27 @@ export default function Gallery() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {galleryImages.map((image, idx) => (
-            <div
+            <button
               key={idx}
-              className="fade-up cursor-pointer"
+              type="button"
+              className="fade-up group w-full text-left rounded-[32px] overflow-hidden transition-transform duration-300 hover:-translate-y-1"
               style={{ transitionDelay: `${idx * 0.1}s` }}
               onClick={() => openLightbox(idx)}
+              aria-label={`View ${image.label}`}
             >
-              <div className="relative aspect-[4/3] rounded-xl overflow-hidden group">
+              <div className="relative aspect-[4/3] rounded-[32px] overflow-hidden shadow-[0_30px_90px_-45px_rgba(13,27,42,0.25)]">
                 <img
                   src={image.src}
                   alt={image.label}
                   loading="lazy"
                   className="absolute inset-0 h-full w-full object-cover"
                 />
-                <div className={`absolute inset-0 bg-gradient-to-br ${image.color} opacity-20`} />
-                {/* Hover effect */}
-                <div className="absolute inset-0 bg-navy/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <span className="text-white font-semibold">{image.label}</span>
+                <div className={`absolute inset-0 bg-gradient-to-br ${image.color} opacity-25`} />
+                <div className="absolute inset-0 bg-navy/35 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center px-4 text-center">
+                  <span className="text-white font-semibold text-lg">{image.label}</span>
                 </div>
               </div>
-            </div>
+            </button>
           ))}
         </div>
       </div>

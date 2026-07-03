@@ -7,6 +7,7 @@ import PrincipalsMessage from './components/PrincipalsMessage';
 import Academics from './components/Academics';
 import WhyChooseUs from './components/WhyChooseUs';
 import Facilities from './components/Facilities';
+import Extracurricular from './components/Extracurricular';
 import Gallery from './components/Gallery';
 import StatsBanner from './components/StatsBanner';
 import Admissions from './components/Admissions';
@@ -71,6 +72,7 @@ function App() {
       <Academics />
       <WhyChooseUs />
       <Facilities />
+      <Extracurricular />
       <Gallery />
       <StatsBanner />
       <Admissions />

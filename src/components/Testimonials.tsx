@@ -40,11 +40,11 @@ export default function Testimonials() {
   }, [isPaused]);
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-white" aria-labelledby="testimonials-title">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 fade-up">
           <span className="text-royal font-semibold text-sm uppercase tracking-wider">Testimonials</span>
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-navy mt-3">
+          <h2 id="testimonials-title" className="font-playfair text-4xl md:text-5xl font-bold text-navy mt-3">
             What Parents Say
           </h2>
         </div>
@@ -54,14 +54,14 @@ export default function Testimonials() {
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
-          <div className="bg-light rounded-2xl p-8 md:p-12 relative overflow-hidden">
+          <div className="bg-light rounded-[32px] p-8 md:p-12 relative overflow-hidden shadow-[0_30px_80px_-40px_rgba(13,27,42,0.18)]">
             {/* Quote icon */}
-            <div className="absolute top-6 left-6 opacity-10">
+            <div className="absolute top-6 left-6 opacity-10" aria-hidden="true">
               <Quote className="w-20 h-20 text-gold" />
             </div>
 
             {/* Testimonial content */}
-            <div className="relative z-10">
+            <div className="relative z-10" aria-live="polite">
               <blockquote className="text-center">
                 <div className="mb-6 flex justify-center">
                   <img

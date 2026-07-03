@@ -9,7 +9,7 @@ const stats = [
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen w-full flex items-center justify-center overflow-hidden py-24 lg:py-0">
       {/* Background with overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy-50 to-navy">
         <img
@@ -17,15 +17,15 @@ export default function Hero() {
           alt="School building and campus view"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-navy/80 via-navy/70 to-navy/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy/80 via-navy/70 to-navy/95" />
       </div>
 
       {/* Decorative elements */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-royal/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-gold/10 rounded-full blur-3xl" />
+      <div className="absolute top-16 left-8 w-72 h-72 bg-royal/10 rounded-full blur-3xl" aria-hidden="true" />
+      <div className="absolute bottom-16 right-8 w-96 h-96 bg-gold/10 rounded-full blur-3xl" aria-hidden="true" />
 
       {/* Content */}
-      <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
+      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
         <div className="fade-up">
           <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-gold text-sm font-medium mb-6 border border-gold/30">
             Recognized by Govt. of Tamil Nadu
@@ -44,27 +44,27 @@ export default function Hero() {
         <div className="fade-up flex flex-col sm:flex-row gap-4 justify-center mb-8">
           <a
             href="#about"
-            className="px-8 py-4 bg-royal text-white font-semibold rounded-full hover:bg-royal-700 transition-all shadow-lg hover:shadow-royal/30 hover:scale-105"
+            className="px-8 py-4 bg-royal text-white font-semibold rounded-full hover:bg-royal-700 transition-all duration-200 shadow-xl hover:shadow-royal/30 hover:-translate-y-0.5 transform"
           >
             Explore Our School
           </a>
           <a
             href="#admissions"
-            className="px-8 py-4 bg-transparent border-2 border-gold text-gold font-semibold rounded-full hover:bg-gold hover:text-navy transition-all"
+            className="px-8 py-4 bg-transparent border-2 border-gold text-gold font-semibold rounded-full hover:bg-gold hover:text-navy transition-all duration-200"
           >
             Admissions 2026-2027
           </a>
         </div>
 
         <div className="fade-up mt-6 mb-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 max-w-5xl mx-auto">
             {stats.map((stat, idx) => (
               <div
                 key={idx}
-                className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 text-center hover:bg-white/15 transition-all hover:scale-105 hover:border-gold/50"
+                className="bg-white/10 backdrop-blur-md rounded-[32px] p-7 border border-white/15 text-center hover:bg-white/15 transition-all duration-300 hover:scale-[1.02] hover:border-gold/50 shadow-[0_20px_60px_-40px_rgba(0,0,0,0.35)]"
               >
-                <div className="text-3xl sm:text-4xl font-bold text-gold mb-1">{stat.value}</div>
-                <div className="text-white/70 text-sm">{stat.label}</div>
+                <div className="text-3xl sm:text-4xl font-bold text-gold mb-2">{stat.value}</div>
+                <div className="text-white/70 text-sm sm:text-base leading-relaxed">{stat.label}</div>
               </div>
             ))}
           </div>

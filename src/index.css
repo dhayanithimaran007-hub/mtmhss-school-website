@@ -4,13 +4,51 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  color-scheme: light;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
+  min-height: 100vh;
+  margin: 0;
   font-family: 'Inter', sans-serif;
-  color: #4A5568;
+  color: #344054;
+  background: radial-gradient(circle at top, rgba(21, 101, 192, 0.15), transparent 25%), #F8F9FC;
+  background-attachment: fixed;
+}
+
+body::selection {
+  background: rgba(245, 166, 35, 0.25);
+  color: #0D1B2A;
+}
+
+img,
+picture,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  position: relative;
 }
 
 .fade-up {

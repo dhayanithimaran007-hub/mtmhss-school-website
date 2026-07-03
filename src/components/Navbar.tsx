@@ -15,6 +15,7 @@ export default function Navbar() {
 
   return (
     <nav
+      role="navigation"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled ? 'bg-navy/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
       }`}
@@ -37,7 +38,7 @@ export default function Navbar() {
               <a
                 key={link}
                 href={`#${link.toLowerCase()}`}
-                className="text-white/90 hover:text-gold transition-colors font-medium"
+                className="text-white/90 hover:text-gold transition-all duration-200 font-medium tracking-wide"
               >
                 {link}
               </a>
@@ -48,7 +49,7 @@ export default function Navbar() {
           <div className="hidden lg:block">
             <a
               href="#admissions"
-              className="px-6 py-2.5 bg-gold text-navy font-semibold rounded-full hover:bg-gold-400 transition-colors shadow-lg hover:shadow-gold/30"
+              className="px-6 py-2.5 bg-gold text-navy font-semibold rounded-full hover:bg-gold-400 transition-all duration-200 shadow-lg hover:shadow-gold/30"
             >
               Apply Now
             </a>
@@ -56,9 +57,10 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-white p-2"
+            className="lg:hidden text-white p-2 rounded-full hover:bg-white/10 transition-all duration-200"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
+            aria-expanded={isOpen}
           >
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>

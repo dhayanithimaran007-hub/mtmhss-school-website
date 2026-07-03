@@ -5,17 +5,17 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Image */}
           <div className="fade-up relative">
-            <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="aspect-[4/3] rounded-[32px] overflow-hidden shadow-[0_40px_90px_-45px_rgba(13,27,42,0.65)]">
               <img
                 src="/Annual%20day%20celeb.jpg"
                 alt="Annual day celebration at Mar Thoma School"
                 className="h-full w-full object-cover"
               />
               {/* Decorative shape */}
-              <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-gold/20 rounded-full blur-2xl" />
+              <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-gold/20 rounded-full blur-2xl" aria-hidden="true" />
             </div>
             {/* Accent shape */}
-            <div className="absolute -z-10 top-6 left-6 w-full h-full border-2 border-gold/30 rounded-2xl" />
+            <div className="absolute -z-10 top-6 left-6 w-full h-full border-2 border-gold/30 rounded-[32px]" aria-hidden="true" />
           </div>
 
           {/* Content */}

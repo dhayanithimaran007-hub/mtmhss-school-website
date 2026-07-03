@@ -79,21 +79,21 @@ export default function Admissions() {
           {/* Steps */}
           <div className="fade-up">
             <h3 className="font-playfair text-2xl font-bold text-navy mb-8">Admission Process</h3>
-            <div className="space-y-6">
+            <div className="space-y-5">
               {steps.map((step, idx) => (
-                <div key={idx} className="flex gap-4">
-                  <div className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center shrink-0">
-                    <span className="font-bold text-gold">{step.num}</span>
+                <div key={idx} className="flex gap-4 rounded-[28px] border border-slate-200 bg-white p-5 shadow-sm transition-all hover:shadow-lg">
+                  <div className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center shrink-0 text-center">
+                    <span className="font-semibold text-gold">{step.num}</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-navy text-lg">{step.title}</h4>
-                    <p className="text-text/70">{step.desc}</p>
+                    <h4 className="font-semibold text-navy text-lg mb-1">{step.title}</h4>
+                    <p className="text-text/75 leading-relaxed">{step.desc}</p>
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="mt-10 p-6 bg-royal/5 rounded-xl border border-royal/20">
+            <div className="mt-10 p-6 bg-royal/5 rounded-[28px] border border-royal/20 shadow-sm">
               <p className="text-navy font-semibold mb-2">Need Assistance?</p>
               <p className="text-text/70 text-sm">
                 Contact our admissions office at <span className="text-royal font-medium">044 - 2479 9335</span> or email us at <span className="text-royal font-medium">marthomaschool@gmail.com</span>
@@ -103,10 +103,10 @@ export default function Admissions() {
 
           {/* Form */}
           <div className="fade-up">
-            <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-xl p-8">
+            <form onSubmit={handleSubmit} className="bg-white rounded-[32px] shadow-[0_30px_90px_-45px_rgba(13,27,42,0.25)] p-8">
               <h3 className="font-playfair text-2xl font-bold text-navy mb-6">Apply Now</h3>
 
-              <div className="space-y-4">
+              <div className="space-y-5">
                 <div>
                   <label className="block text-navy font-medium text-sm mb-1">Student Name *</label>
                   <input
@@ -190,7 +190,7 @@ export default function Admissions() {
                 <button
                   type="submit"
                   disabled={submitted}
-                  className="w-full py-4 bg-gold text-navy font-semibold rounded-lg hover:bg-gold-400 transition-colors flex items-center justify-center gap-2 disabled:opacity-70"
+                  className="w-full py-4 bg-gold text-navy font-semibold rounded-full hover:bg-gold-400 transition-colors duration-200 flex items-center justify-center gap-2 disabled:opacity-70"
                 >
                   {submitted ? (
                     <>
