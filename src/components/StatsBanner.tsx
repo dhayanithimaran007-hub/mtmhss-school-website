@@ -2,8 +2,8 @@ import { useEffect, useState, useRef } from 'react';
 
 const stats = [
   { value: 50, suffix: '+', label: 'Years of Excellence' },
-  { value: 1200, suffix: '+', label: 'Students' },
-  { value: 100, suffix: '%', label: 'State Board Results' },
+  { value: 800, suffix: '+', label: 'Students' },
+  { value: 98, suffix: '%', label: 'State Board Results' },
   { value: 14, suffix: '', label: 'Grades (LKG-XII)' },
 ];
 
