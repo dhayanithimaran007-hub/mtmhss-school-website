@@ -1,7 +1,7 @@
 import { ChevronDown } from 'lucide-react';
 
 const stats = [
-  { value: '1200+', label: 'Students' },
+  { value: '800+', label: 'Students' },
   { value: '50+', label: 'Faculty' },
   { value: 'Since 1974', label: 'Established' },
   { value: 'LKG to Grade 12', label: 'Grades' },
