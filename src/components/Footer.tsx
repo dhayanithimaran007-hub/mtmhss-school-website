@@ -16,8 +16,8 @@ export default function Footer() {
           {/* School Info */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-navy-50 to-navy flex items-center justify-center border-2 border-gold">
-                <span className="font-playfair font-bold text-gold text-sm">MTMHSS</span>
+              <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-gold shadow-lg flex items-center justify-center bg-white/10">
+                <img src="/School logo.jpg" alt="School Logo" className="w-full h-full object-cover" />
               </div>
               <div>
                 <span className="font-playfair font-semibold text-white text-lg block">Mar Thoma MHSS</span>
