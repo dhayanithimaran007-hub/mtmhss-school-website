@@ -7,13 +7,13 @@ const academicSections = [
   },
   {
     title: 'Middle School',
-    grades: 'VI – VIII',
+    grades: 'VI – X',
     subjects: ['English', 'Tamil', 'Maths', 'Science', 'Social Studies'],
     color: 'from-navy to-navy-50',
   },
   {
     title: 'Senior School',
-    grades: 'IX – XII',
+    grades: 'XI – XII',
     subjects: ['Higher Secondary Streams'],
     groups: [
       { name: 'Group 1', subjects: 'Maths, Physics, Chemistry, Computer Science' },
