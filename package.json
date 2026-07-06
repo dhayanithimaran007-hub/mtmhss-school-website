@@ -1,7 +1,8 @@
 {
-  "name": "vite-react-typescript-starter",
+{"name": "mar-thoma-mhss",
   "private": true,
   "version": "0.0.0",
+  "description": "Mar Thoma MHSS school website built with Vite and React.",
   "type": "module",
   "scripts": {
     "dev": "vite",
